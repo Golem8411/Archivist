@@ -1,0 +1,12 @@
+# Variáveis de Ambiente e Segredos
+.env
+
+# Banco de Dados
+*.db
+*.sqlite3
+
+# Caches do Python e Arquivos Locais
+__pycache__/
+*.bat
+.venv/
+venv/
