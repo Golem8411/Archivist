@@ -98,7 +98,7 @@ O projeto está totalmente containerizado, garantindo que rode de forma idêntic
 
 ### 1. Construa a Imagem Docker
 Na pasta raiz do projeto, construa a imagem executando:
-```bash
+
 docker build -t golem-bot .
 
 Focado em organizar sessões de brainstorming de histórias: ele extrai o sumo da discussão e categoriza (ex: Personagens, Enredo, Cenário) entregando um resumo estruturado no chat.
