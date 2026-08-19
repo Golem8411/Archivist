@@ -83,6 +83,24 @@ O bot envia o arquivo diretamente no chat pronto para ser aberto no Excel ou Goo
 ## 🧠 Resumo Inteligente (/resumir)
 Lê o histórico recente de mensagens (últimas 24 horas) do canal atual e envia tudo para a IA do Google Gemini.
 
+## 🏗️ Arquitetura do Projeto
+
+Este projeto foi refatorado para utilizar as melhores práticas de Engenharia de Software, abandonando o modelo monolítico. 
+* **Padrão DAO (Data Access Object):** A lógica de banco de dados (`database.py`) é totalmente isolada da regra de negócios do bot, facilitando manutenção e testes.
+* **Módulos (Cogs):** A arquitetura do Discord.py foi dividida em Cogs dinâmicos (pasta `cogs/`). O sistema principal carrega os comandos de mídia e inteligência artificial de forma independente.
+* **Gestão de Sessões:** Uso eficiente de `aiohttp.ClientSession` persistente e atrelada à classe do bot, evitando vazamento de memória e múltiplas aberturas de conexão.
+
+---
+
+## 🐳 Executando com Docker (Recomendado)
+
+O projeto está totalmente containerizado, garantindo que rode de forma idêntica em qualquer sistema operacional ou servidor em nuvem, sem conflitos de dependência.
+
+### 1. Construa a Imagem Docker
+Na pasta raiz do projeto, construa a imagem executando:
+```bash
+docker build -t golem-bot .
+
 Ignora mensagens do próprio bot e comandos.
 
 Focado em organizar sessões de brainstorming de histórias: ele extrai o sumo da discussão e categoriza (ex: Personagens, Enredo, Cenário) entregando um resumo estruturado no chat.
