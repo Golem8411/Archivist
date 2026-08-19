@@ -101,6 +101,4 @@ Na pasta raiz do projeto, construa a imagem executando:
 ```bash
 docker build -t golem-bot .
 
-Ignora mensagens do próprio bot e comandos.
-
 Focado em organizar sessões de brainstorming de histórias: ele extrai o sumo da discussão e categoriza (ex: Personagens, Enredo, Cenário) entregando um resumo estruturado no chat.
